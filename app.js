@@ -7,6 +7,8 @@ const cron = require('node-cron');
 
 
 // Schedule a task to run every day at 9:30 AM
+console.log(process.env.RUN_TIME);
+
 cron.schedule(`${process.env.RUN_TIME} * * *`, async() => {
   const url = process.env.CHECK_URL; // Replace with the website you want to screenshot
 
