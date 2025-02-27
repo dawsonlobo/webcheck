@@ -10,6 +10,8 @@ const cron = require('node-cron');
 console.log(process.env.RUN_TIME);
 
 cron.schedule(`${process.env.RUN_TIME} * * *`, async() => {
+  console.log("Starting");
+  
   const url = process.env.CHECK_URL; // Replace with the website you want to screenshot
 
   // Launch browser
